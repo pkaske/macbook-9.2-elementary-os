@@ -11,3 +11,7 @@ Section "Device"
         Option      "Backlight"  "intel_backlight"
         BusID       "PCI:0:2:0"EndSection
 ```
+
+## Get wireless working after kernel update
+[https://github.com/longsleep/bcmwl-ubuntu](https://github.com/longsleep/bcmwl-ubuntu)
+
