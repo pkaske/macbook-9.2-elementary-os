@@ -1,7 +1,13 @@
 # Macbook 9,2 elementary os installation fixes
 Some hints how to run elementary os on a macbook pro 9,2 properly
 
+## Install with EFI (rEFInd) support (no grub)
+See this document: [https://github.com/aroman/freya-on-a-mac](https://github.com/aroman/freya-on-a-mac)
+
 ## Make backlight control work
+This is only necessary if elementary os is installed with grub bootloader.
+EFI (via rEFInd in my case) seems to make this work out of the box.
+
 `sudo vim /usr/share/X11/xorg.conf.d/20-intel.conf`
 Enter the following
 ```
@@ -12,7 +18,7 @@ Section "Device"
         BusID       "PCI:0:2:0"EndSection
 ```
 
-## Get wireless working after kernel update
+## Get wireless working (but seems to work out of the box with original kernel)
 [https://github.com/longsleep/bcmwl-ubuntu](https://github.com/longsleep/bcmwl-ubuntu)
 
 ## Fix Apple aluminum keyboard
