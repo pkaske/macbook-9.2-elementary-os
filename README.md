@@ -15,6 +15,19 @@ Section "Device"
 ## Get wireless working after kernel update
 [https://github.com/longsleep/bcmwl-ubuntu](https://github.com/longsleep/bcmwl-ubuntu)
 
+## Fix Apple aluminum keyboard
+`sudo vi /etc/modprobe.d/hid_apple.conf`
+
+Add the following lines:
+
+```
+options hid_apple fnmode=2
+options hid_apple iso_layout=0
+```
+
+Then update:
+`sudo update-initramfs -u -k all`
+
 ## Basic PPA's & Apps
 
 ```
@@ -29,7 +42,7 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 
 sudo apt-get update
-sudo apt-get install menulibre gnome-disk-utility mysql-client p7zip-full shutter gimp gpick ffmulticonverter darktable libreoffice libreoffice-l10n-de libreoffice-help-de pidgin filezilla firefox vlc gparted google-chrome-stable htop backintime-gnome dconf-tools timeshift git
+sudo apt-get install menulibre gnome-disk-utility mysql-client p7zip-full shutter gimp gpick ffmulticonverter darktable libreoffice libreoffice-l10n-de libreoffice-help-de pidgin filezilla firefox vlc gparted google-chrome-stable htop backintime-gnome dconf-tools timeshift git vim 
 
 URL='https://atom.io/download/deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
 ```
