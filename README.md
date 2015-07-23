@@ -28,6 +28,9 @@ options hid_apple iso_layout=0
 Then update:
 `sudo update-initramfs -u -k all`
 
+## Fix Chrome double blurry icon in plank
+Add `StartupWMClass=Google-chrome-stable` to __each sektion__ of `/usr/share/applications/google-chrome.desktop`
+
 ## Basic PPA's & Apps
 
 ```
