@@ -1,5 +1,6 @@
 # Macbook 9,2 elementary os installation fixes
-Some hints how to run elementary os on a macbook pro 9,2 properly
+Some hints how to run elementary os on a macbook pro 9,2 properly.
+Be aware that this guide is heavily influenced by my own preferences.
 
 ## Install with EFI (rEFInd) support (no grub)
 See this document: [https://github.com/aroman/freya-on-a-mac](https://github.com/aroman/freya-on-a-mac)
