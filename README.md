@@ -38,6 +38,18 @@ Then update:
 ## Fix Chrome double blurry icon in plank
 Add `StartupWMClass=Google-chrome-stable` to __each sektion__ of `/usr/share/applications/google-chrome.desktop`
 
+## Fix Mad Catz R.A.T 3 Mouse
+Create `50-madcatzRat3.conf` in `/usr/share/X11/xorg.conf.d/` with the following content:
+
+```
+Section "InputClass"
+    Identifier  "Mouse Remap"
+    MatchProduct    "Madcatz Mad Catz R.A.T.3 Mouse"
+    MatchDevicePath "/dev/input/event*"
+    Option      "ButtonMapping" "1 2 3 4 5 0 0 8 9 0 0 0 0 0"
+EndSection
+```
+
 ## Basic PPA's & Apps
 
 ```
