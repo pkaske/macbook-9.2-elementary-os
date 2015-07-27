@@ -35,8 +35,11 @@ options hid_apple iso_layout=0
 Then update:
 `sudo update-initramfs -u -k all`
 
-## Fix Chrome double blurry icon in plank
-Add `StartupWMClass=Google-chrome-stable` to the Chrome Desktop shortcut, using `Menulibre`.
+## Fix blurry dublicate Chrome icon in plank
+Add `StartupWMClass=Google-chrome-stable` to the Desktop shortcut, using `Menulibre`.
+
+## Fix blurry dublicate PhpStorm icon in plank
+Add `StartupWMClass=jetbrains-phpstorm` to the Desktop shortcut, using `Menulibre`.
 
 ## Fix Mad Catz R.A.T 3 Mouse
 Create `50-madcatzRat3.conf` in `/usr/share/X11/xorg.conf.d/` with the following content:
