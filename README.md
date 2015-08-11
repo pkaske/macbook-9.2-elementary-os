@@ -66,11 +66,12 @@ sudo add-apt-repository -y ppa:bit-team/stable
 sudo apt-add-repository -y ppa:teejee2008/ppa
 sudo add-apt-repository -y ppa:nilarimogard/webupd8
 sudo add-apt-repository -y ppa:thefanclub/grive-tools
+sudo add-apt-repository -y ppa:maarten-baert/simplescreenrecorder
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 
 sudo apt-get update
-sudo apt-get install menulibre gnome-disk-utility mysql-client p7zip-full shutter gimp gpick ffmulticonverter darktable libreoffice libreoffice-l10n-de libreoffice-help-de pidgin filezilla firefox vlc gparted google-chrome-stable htop backintime-gnome dconf-tools timeshift git vim exfat-fuse exfat-utils inkscape grive grive-tools
+sudo apt-get install menulibre gnome-disk-utility mysql-client p7zip-full shutter gimp gpick ffmulticonverter darktable libreoffice libreoffice-l10n-de libreoffice-help-de pidgin filezilla firefox vlc gparted google-chrome-stable htop backintime-gnome dconf-tools timeshift git vim exfat-fuse exfat-utils inkscape grive grive-tools simplescreenrecorder
 
 URL='https://atom.io/download/deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
 ```
